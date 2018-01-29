@@ -15,30 +15,31 @@ def fInput():
 
 @app.route("/",methods=['POST','GET'])
 def fProcess():
-    global cnt
-    Client_msgs.append(request.form['text'])
-    client_query = Client_msgs[cnt]
-    
-    cnt+=1
+	if request.method == "POST":
+	    global cnt
+	    Client_msgs.append(request.form['text'])
+	    client_query = Client_msgs[cnt]
+	    
+	    cnt+=1
 
-    received_response = client.message(client_query)
+	    received_response = client.message(client_query)
 
-    #print(received_response['entities'])
+	    #print(received_response['entities'])
 
-    print(len(received_response['entities']))
+	    print(len(received_response['entities']))
 
-    Current_wit_Response = []
-    for i in range(len(received_response['entities'])):
-        entity = None
-        value = None
-        try:
-            entity = list(received_response['entities'])[i]
-            value = received_response['entities'][entity][0]['value']
-        except:
-            pass
-        Wit_Responses.append([entity,value])
-        Current_wit_Response.append([entity,value])
-    return render_template('sam.html',my_list = Current_wit_Response)
+	    Current_wit_Response = []
+	    for i in range(len(received_response['entities'])):
+	        entity = None
+	        value = None
+	        try:
+	            entity = list(received_response['entities'])[i]
+	            value = received_response['entities'][entity][0]['value']
+	        except:
+	            pass
+	        Wit_Responses.append([entity,value])
+	        Current_wit_Response.append([entity,value])
+	    return render_template('sam.html',my_list = Current_wit_Response)
 
 
 if __name__=='__main__':
