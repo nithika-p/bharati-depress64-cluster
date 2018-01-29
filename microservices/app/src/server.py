@@ -20,6 +20,7 @@ def fProcess():
 	    Client_msgs.append(request.form['text'])
 	    client_query = Client_msgs[cnt]
 	    
+	    print('Request-content:'+request.get_json())
 	    cnt+=1
 
 	    received_response = client.message(client_query)
@@ -29,16 +30,19 @@ def fProcess():
 	    print(len(received_response['entities']))
 
 	    Current_wit_Response = []
-	    for i in range(len(received_response['entities'])):
-	        entity = None
-	        value = None
-	        try:
-	            entity = list(received_response['entities'])[i]
-	            value = received_response['entities'][entity][0]['value']
-	        except:
-	            pass
-	        Wit_Responses.append([entity,value])
-	        Current_wit_Response.append([entity,value])
+	    if len(received_response['entities'])!=0:
+		    for i in range(len(received_response['entities'])):
+		        entity = None
+		        value = None
+		        try:
+		            entity = list(received_response['entities'])[i]
+		            value = received_response['entities'][entity][0]['value']
+		        except:
+		            pass
+		        Wit_Responses.append([entity,value])
+		        Current_wit_Response.append([entity,value])
+		else:
+			Current_wit_Response.append("Sorry wit could not understand what you just said!")
 	    return render_template('sam.html',my_list = Current_wit_Response)
 
 
