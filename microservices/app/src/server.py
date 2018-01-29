@@ -31,7 +31,7 @@ def fProcess():
 
 	    Current_wit_Response = []
 	    if len(received_response['entities'])!=0:
-		    for i in range(len(received_response['entities'])):
+	    	for i in range(len(received_response['entities'])):
 		        entity = None
 		        value = None
 		        try:
@@ -41,8 +41,10 @@ def fProcess():
 		            pass
 		        Wit_Responses.append([entity,value])
 		        Current_wit_Response.append([entity,value])
-		else:
-			Current_wit_Response.append("Sorry wit could not understand what you just said!")
+	    else:
+	    	Current_wit_Response.append("Sorry wit could not understand what you just said!")
+		
+			
 	    return render_template('sam.html',my_list = Current_wit_Response)
 
 
