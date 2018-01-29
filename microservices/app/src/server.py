@@ -48,7 +48,7 @@ def fProcess():
 				# Wit_Responses.append([entity,value])
 				# Current_wit_Response.append([entity,value])
 		else:
-			# Current_wit_Response.append("Sorry wit could not understand what you just said!")
+			Current_wit_Response.append("Sorry wit could not understand what you just said!")
 		if flag==1:
 			jSon_String=json.dumps([e.toJson() for e in Object_list])
 			return jSon_String
