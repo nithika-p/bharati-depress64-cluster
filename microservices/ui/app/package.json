@@ -15,8 +15,8 @@
     "uuid": "^3.1.0"
   },
   "scripts": {
-    "start": "cross-env REACT_APP_CLUSTER_NAME=fireman29 react-scripts start",
-    "build": "cross-env REACT_APP_CLUSTER_NAME=fireman29 react-scripts build",
+    "start": "cross-env REACT_APP_CLUSTER_NAME=depress64 react-scripts start",
+    "build": "cross-env REACT_APP_CLUSTER_NAME=depress64 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
