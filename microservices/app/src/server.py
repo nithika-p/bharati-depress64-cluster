@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request,redirect,send_file
 import requests,json,wit,sys,ast
 from .Object_response_class import Response_object
+
 client = wit.Wit('ROMP5H3YEJBXQ76GNQHQYG4VHD2YGJ2D')
 
 Client_msgs = []
@@ -9,6 +10,8 @@ Wit_Responses = []
 cnt = 0
 
 app = Flask(__name__)
+
+app.secret_key = 'some_secret'
 
 @app.route("/")
 def fInput():
