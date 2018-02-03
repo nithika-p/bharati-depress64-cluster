@@ -1,5 +1,5 @@
-# Overview
-To create an application that allows the user to enter a text and finds the intent behind the text and display it to the user using the wit.ai api.
+# Overview of project
+An application that allows the user to enter a text and finds the intent behind the text and display it to the user using the wit.ai api.
 The Study planner app supports both week and day rotation schedules as well as timetables that repeat every week and enables the user to know about his/her upcoming tests,assignments and homeworks by simply asking the bot for it.
 Goals and tasks
 ### Front end:
