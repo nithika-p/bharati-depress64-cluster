@@ -91,6 +91,12 @@ The recommended way to install React depends on your project. Here you can find 
 - [Creating a New Application](https://reactjs.org/docs/add-react-to-a-new-app.html)
 - [Adding React to an Existing Application](https://reactjs.org/docs/add-react-to-an-existing-app.html)
 
+### To make changes to the project
+
+1. Clone the project
+2. you can edit the project files which are found in the src folder.
+3. Open command prompt in the app folder and type `npm start` to see the output in your web browser.
+
 
 
 # hello-python-flask
