@@ -36,7 +36,7 @@ Goals and tasks
 ### Frameworks used:
    ### Front end
 1.ReactJS
-2. Material-UI
+2.Material-UI
    ### Back-end
 1. Python-Flask
 
