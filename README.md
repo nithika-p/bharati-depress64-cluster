@@ -1,3 +1,98 @@
+### Overview
+To create an application that allows the user to enter a text and finds the intent behind the text and display it to the user using the wit.ai api.
+The Study planner app supports both week and day rotation schedules as well as timetables that repeat every week and enables the user to know about his/her upcoming tests,assignments and homeworks by simply asking the bot for it.
+Goals and tasks
+# Front end:
+(SKELETAL INTEGRATION OF API)
+ 1.  Take text  input from the user or allow the user to pick from a set of texts.
+ 2.  Display the intent of the text entered by the user if the intent has been found by the wit api.
+ 3.  Display some kind of an  error message if intent of text is not found.
+(APP)
+ 1.  Make a login page
+ 2.  Allow the user to add , change and delete assignments, tests and homeworks.
+ 3.  Make a chat component that allows the user to ask the bot questions like, 
+     - Which classes do I have tomorrow?
+     - Do I have any tests tomorrow or within the next two days?
+     - Do I have any pending assignments?
+     - What are the assignments and homeworks I need to submit tomorrow?
+ 4. Display the answers of the above questions to the user
+ 5. Allow the user to upload notes and Timetable.
+# Back end:
+-Design the complete application with specifications and documenting everything with complete details.
+-Create or find a spreadsheet which contains almost all forms of questions and phrases for targeted intents.
+-Train the wit app for handling all these(through code snippet).
+-Create a database where the information about authentication, users, tests, assignments,etc is stored.
+-Add security features to the client to server connection for transferring the data without interference.
+-Develop the code for all the basic operations stated in the app. This includes -
+-Fetching the data from the client.
+-Storing and sending the data to the wit app and extracting information from the received response.
+-Updating/adding/deleting/searching the data in the database depending upon the type of response.
+-Properly formatting the answer or the acknowledgement(in case of updation or deletion) and sending it back to the client.
+-Adding the feature-centric code.
+-Testing the application code rigorously without and with the extra features.
+
+### Specifications
+
+# Frameworks used:
+   # Front end
+1.ReactJS
+2. Material-UI
+   # Back-end
+1. Python-Flask
+
+# Documents referred
+1. Material-UI  -  https://material.io/guidelines/material-design/introduction.html#
+2. Wit.ai  -  https://wit.ai/docs
+3. ReactJS - https://reactjs.org/tutorial/tutorial.html
+5. Wit.ai and Python - https://github.com/wit-ai/pywit
+6. Using Wit.ai - https://github.com/wit-ai/wit-api-only-tutorial/blob/master/README.md
+
+
+# React
+
+React is a JavaScript library for building user interfaces.
+
+### Declarative:
+React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+### Component-Based:
+Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+
+[Learn how to use React in your own project.](https://reactjs.org/docs/hello-world.html)
+
+# Examples of a ReactJS project
+
+
+```class HelloMessage extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+  }
+}
+
+ReactDOM.render(
+  <HelloMessage name="John" />,
+  document.getElementById('container')
+);
+```
+
+This example will render "Hello John" into a container on the page.
+
+More examples [on the website](https://reactjs.org/)
+
+You'll notice that we used an HTML-like syntax; we call it JSX. JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. We recommend using Babel with a React preset to convert JSX into native JavaScript for browsers to digest.
+
+# Installation
+React is available as the react package on [npm](https://www.npmjs.com/). It is also available on a [CDN](https://reactjs.org/docs/cdn-links.html).
+
+React is flexible and can be used in a variety of projects. You can create new apps with it, but you can also gradually introduce it into an existing codebase without doing a rewrite.
+
+The recommended way to install React depends on your project. Here you can find short guides for the most common scenarios:
+
+- [Trying Out React](https://reactjs.org/docs/try-react.html)
+- [Creating a New Application](https://reactjs.org/docs/add-react-to-a-new-app.html)
+- [Adding React to an Existing Application](https://reactjs.org/docs/add-react-to-an-existing-app.html)
+
+
+
 # hello-python-flask
 
 Boilerplate Hasura project with [Flask](http://flask.pocoo.org/) microservice.
@@ -372,46 +467,4 @@ $ docker run --rm -it -p 8080:8080 \
 
 Now, any change you make to your source code will be immediately updated on the running app.
 
-# React
-
-React is a JavaScript library for building user interfaces.
-
-### Declarative:
-React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
-### Component-Based:
-Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-
-[Learn how to use React in your own project.](https://reactjs.org/docs/hello-world.html)
-
-# Examples of a ReactJS project
-
-
-```class HelloMessage extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
-}
-
-ReactDOM.render(
-  <HelloMessage name="John" />,
-  document.getElementById('container')
-);
-```
-
-This example will render "Hello John" into a container on the page.
-
-More examples [on the website](https://reactjs.org/)
-
-You'll notice that we used an HTML-like syntax; we call it JSX. JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. We recommend using Babel with a React preset to convert JSX into native JavaScript for browsers to digest.
-
-# Installation
-React is available as the react package on [npm](https://www.npmjs.com/). It is also available on a [CDN](https://reactjs.org/docs/cdn-links.html).
-
-React is flexible and can be used in a variety of projects. You can create new apps with it, but you can also gradually introduce it into an existing codebase without doing a rewrite.
-
-The recommended way to install React depends on your project. Here you can find short guides for the most common scenarios:
-
-- [Trying Out React](https://reactjs.org/docs/try-react.html)
-- [Creating a New Application](https://reactjs.org/docs/add-react-to-a-new-app.html)
-- [Adding React to an Existing Application](https://reactjs.org/docs/add-react-to-an-existing-app.html)
 
