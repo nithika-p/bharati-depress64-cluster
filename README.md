@@ -33,6 +33,57 @@ Goals and tasks
 
 ## Specifications
 
+
+You need to create the your wit app. Use this to start the creation.
+
+First of all, Python 3 should be installed. Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. Refer this for the installation.
+
+python --version
+
+Type the above in the console to check whether it is installed properly. If errors are encountered, installation is incomplete. If everything is done properly, the downloaded version will be shown on the console.
+
+Then the micro-framework which is the basis of the backend programming for this project, i.e Python-Flask should be installed. I recommend that you get started with Installation and then head over to the Quickstart. Besides the quickstart, there is also a more detailed Tutorial that shows how to create a complete (albeit small) application with Flask. If you’d rather dive into the internals of Flask, check out the API documentation. Common patterns are described in the Patterns for Flask section. Flask depends on two external libraries: the Jinja2 template engine and the Werkzeug WSGI toolkit. These libraries are not documented here. If you want to dive into their documentation, check out the following links:
+Jinja2 Documentation
+Werkzeug Documentation
+
+Now, the aim for this project is to have a custom microservice interacting with the wit.ai. Wit learns from what your users say and extract useful information. You can either get an existing command from the Wit community or create your own. Pywit is the Python SDK for Wit.ai.rce:
+
+Install
+Using pip:
+pip install wit
+From source:
+git clone https://github.com/wit-ai/pywit
+pip install .
+Overview
+pywit provides a Wit class with the following methods:
+message - the Wit message API
+speech - the Wit speech API
+interactive - starts an interactive conversation with your bot
+Wit class
+The Wit constructor takes the following parameters:
+access_token - the access token of your Wit instance
+A minimal example looks like this:
+from wit import Wit
+
+client = Wit(access_token)
+client.message('set an alarm tomorrow at 7am')
+.message()
+The Wit message API.
+Takes the following parameters:
+msg - the text you want Wit.ai to extract the information from
+verbose - (optional) if set, calls the API with verbose=true
+Example:
+resp = client.message('what is the weather in London?')
+print('Yay, got Wit.ai response: ' + str(resp))
+See the docs for more information.
+Now, for communicating with the frontend frameworks, we need the requests library. Python 3.4 has pip support built-in, so you can also use:
+python3.4 -m pip install
+If you're running Ubuntu (or probably Debian as well), you'll need to install the system pip3 separately:
+sudo apt-get install python3-pip
+This will install the pip3 executable, so you can use, as well as the earlier mentioned python3.4 -m pip:
+pip3 install requests
+
+
 ### Frameworks used:
    ### Front end
 1.ReactJS
