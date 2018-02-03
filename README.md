@@ -1,8 +1,8 @@
-### Overview
+# Overview
 To create an application that allows the user to enter a text and finds the intent behind the text and display it to the user using the wit.ai api.
 The Study planner app supports both week and day rotation schedules as well as timetables that repeat every week and enables the user to know about his/her upcoming tests,assignments and homeworks by simply asking the bot for it.
 Goals and tasks
-# Front end:
+### Front end:
 (SKELETAL INTEGRATION OF API)
  1.  Take text  input from the user or allow the user to pick from a set of texts.
  2.  Display the intent of the text entered by the user if the intent has been found by the wit api.
@@ -17,7 +17,7 @@ Goals and tasks
      - What are the assignments and homeworks I need to submit tomorrow?
  4. Display the answers of the above questions to the user
  5. Allow the user to upload notes and Timetable.
-# Back end:
+### Back end:
 -Design the complete application with specifications and documenting everything with complete details.
 -Create or find a spreadsheet which contains almost all forms of questions and phrases for targeted intents.
 -Train the wit app for handling all these(through code snippet).
@@ -31,16 +31,16 @@ Goals and tasks
 -Adding the feature-centric code.
 -Testing the application code rigorously without and with the extra features.
 
-### Specifications
+## Specifications
 
-# Frameworks used:
-   # Front end
+### Frameworks used:
+   ### Front end
 1.ReactJS
 2. Material-UI
-   # Back-end
+   ### Back-end
 1. Python-Flask
 
-# Documents referred
+## Documents referred
 1. Material-UI  -  https://material.io/guidelines/material-design/introduction.html#
 2. Wit.ai  -  https://wit.ai/docs
 3. ReactJS - https://reactjs.org/tutorial/tutorial.html
