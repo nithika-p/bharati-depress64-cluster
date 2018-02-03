@@ -372,13 +372,13 @@ $ docker run --rm -it -p 8080:8080 \
 
 Now, any change you make to your source code will be immediately updated on the running app.
 
-### React
+# React
 
 React is a JavaScript library for building user interfaces.
 
-# Declarative:
+### Declarative:
 React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
-# Component-Based:
+### Component-Based:
 Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
 
 [Learn how to use React in your own project.](https://reactjs.org/docs/hello-world.html)
